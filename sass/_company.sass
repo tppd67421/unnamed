@@ -1,0 +1,28 @@
+.company
+	padding: 58px 0
+	&__list
+		width: 890px
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__logo
+		@include svg-picture
+		background-size: 100% auto
+		width: 116px
+		height: 29px
+		cursor: pointer
+		transition: 200ms
+		filter: grayscale(100%)
+		&:hover
+			filter: grayscale(0%)
+		&_bitbucket
+			background-image: url(../img/company/bitbucket.svg)
+		&_watch
+			background-image: url(../img/company/watch.svg)
+		&_facebook
+			background-image: url(../img/company/facebook.svg)
+		&_atlassian
+			background-image: url(../img/company/atlassian.svg)
+		&_audi
+			background-image: url(../img/company/audi.svg)

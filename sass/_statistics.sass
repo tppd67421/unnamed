@@ -1,0 +1,46 @@
+.statistics
+	display: flex
+	justify-content: center
+	font-family: 'Quicksand', sans-serif
+	&__productivity,
+	&__users
+		flex-basis: 52%
+	&__productivity_img,
+	&__users_img
+		margin-bottom: 24px
+	&__productivity_title,
+	&__users_title
+		font-weight: 400
+		font-size: 48px
+		letter-spacing: 0.03em
+		margin-bottom: 18px
+	&__productivity_text,
+	&__users_text
+		font-weight: 500
+		line-height: 23px
+		font-size: 18px
+		letter-spacing: 0.03em
+		width: 260px
+	&__productivity
+		padding: 66px 90px 66px 0
+		background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%)
+		color: #fff
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		&_img
+			background-image: url(../img/statistics/productivity.svg)
+			width: 65px
+			height: 66px
+			@include svg-picture
+		&_text
+			text-align: right
+	&__users
+		padding: 66px 0 66px 90px
+		background: linear-gradient(130.53deg, #E9EFFF 41.56%, #E0E9FF 81.53%)
+		color: #5E80FF
+		&_img
+			background-image: url(../img/statistics/users.svg)
+			width: 71px
+			height: 62px
+			@include svg-picture

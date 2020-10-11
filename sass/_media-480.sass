@@ -1,0 +1,145 @@
+@media (max-width: 480px)
+  .subtitle
+    margin-bottom: 15px
+  .subtitle,
+  .title,
+  .normal-text
+    padding: 0 20px
+  .header
+    &__subtitle
+      padding-top: 60px
+    &__title
+      line-height: 45px
+      font-size: 40px !important
+      padding: 0 10px
+      margin-bottom: 25px
+    &__normal-text
+      line-height: 24px !important
+      font-size: 14px !important
+    &__popup
+      &_video
+        width: 100%
+  .app
+    &__text
+      padding: 0
+      &_title
+        line-height: 38px !important
+        margin-bottom: 22px
+      &_normal-text
+        line-height: 25px !important
+        margin-bottom: 35px
+    &__main-button,
+    &__normal-button
+      padding: 13px 16px
+  .about
+    padding: 60px 0
+    &__title
+      margin-bottom: 30px
+      line-height: 29px
+    &__advantages
+      margin-bottom: 30px
+      @for $i from 1 through 4
+        &_img#{$i}
+          margin-bottom: 15px
+      &-item
+        margin: 15px
+      @for $i from 1 through 4
+        &_img#{$i}
+          margin-bottom: 15px
+      &_title
+        margin-bottom: 5px
+    &__buttons
+      flex-direction: column
+      &_text
+        margin: 10px 0
+  .statistics
+    &__productivity_title,
+    &__users_title
+      margin-bottom: 5px
+  .resources
+    padding: 60px 0
+    &__title
+      margin-bottom: 25px
+    &__slider
+      &-wrap
+        width: 100%
+      &-title
+        width: 100%
+        line-height: 26px
+        margin-bottom: 10px
+      &-text
+        width: 100%
+        margin-bottom: 20px
+      &-buttons
+        flex-wrap: wrap
+        width: 100%
+        width: auto
+      &-button,
+      &-link
+        margin: 0 10px
+        margin-bottom: 15px
+      &_item
+        margin: 0 10px
+        padding-bottom: 0
+        width: 95%
+        &_text
+          width: 100%
+      &-arrow
+        &-left,
+        &-right
+          position: absolute
+          bottom: 0
+        &-left
+          left: 5%
+          transform: rotate(180deg) translateY(-47px)
+        &-right
+          right: 5%
+          transform: translateY(47px)
+  .testimonials
+    padding: 60px 0
+    &__title
+      line-height: 38px !important
+    &__normal-text
+      width: auto
+      line-height: 25px
+    &__slider
+      margin-bottom: 80px
+      &_item
+        padding: 15px 20px
+        padding-bottom: 30px !important
+        &_text
+          width: 75vw
+        &_img
+          transform: translateY(58px)
+      &_arrow
+        bottom: 5px
+        justify-content: center
+        &-left,
+        &-right
+          margin: 15px
+  .help
+    padding: 60px 0
+    &__item
+      &_text
+        width: auto
+        line-height: 23px
+  .plan
+    padding: 60px 0
+    &__title
+      font-size: 40px !important
+    &__normal-text
+      line-height: 24px !important
+      font-size: 14px !important
+    &__button
+      &_main,
+      &_normal
+        padding: 13px 9px
+  .sign-up
+    &__text
+      margin-bottom: 30px
+      &_normal-text
+        width: auto
+    &__subscribe
+      width: 100%
+      &_input
+        width: 70%
