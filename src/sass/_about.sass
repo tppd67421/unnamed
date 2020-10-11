@@ -1,0 +1,110 @@
+.about
+	font-family: 'Open Sans', sans-serif
+	@include text
+	text-align: center
+	padding: 120px 0
+	position: relative
+	display: flex
+	flex-direction: column
+	&__subtitle
+		margin-bottom: 20px
+	&__title
+		font-size: 24px !important
+		margin-bottom: 92px
+	&__advantages
+		display: flex
+		align-items: flex-start
+		justify-content: center
+		margin-bottom: 100px
+		&-item
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+		&_img1
+			@include about-img
+			&:after
+				background-image: url(../img/about/overview.svg)
+				width: 14px
+				height: 17px
+		&_img2
+			@include about-img
+			&:after
+				background-image: url(../img/about/files.svg)
+				width: 23px
+				height: 14px
+		&_img3
+			@include about-img
+			&:after
+				background-image: url(../img/about/chats.svg)
+				width: 18px
+				height: 15px
+		&_img4
+			@include about-img
+			&:after
+				background-image: url(../img/about/events.svg)
+				width: 17px
+				height: 15px
+		&_title
+			font-weight: 700
+			color: #4074F8
+			font-size: 14px
+			margin-bottom: 25px
+		&_text
+			font-weight: 600
+			line-height: 19px
+			font-size: 11px
+			text-align: center
+			color: #ADB3CB
+			width: 140px
+		&_line
+			width: 28px
+			height: 0
+			border-bottom: 2px solid #DAE4FE
+			margin: 0 20px
+			align-self: center
+	&__buttons
+		display: flex
+		justify-content: center
+		align-items: center
+		font-family: 'Quicksand', sans-serif
+		&_button1,
+		&_button2
+			font-weight: 700
+			padding: 13px 16px
+			border-radius: 2px
+			font-size: 13px
+			transition: 200ms
+		&_button1
+			color: #D43F3F
+			background-color: #FFD7D7
+			&:hover
+				box-shadow: 0px 3px 20px rgba(255, 215, 215, 0.7)
+		&_button2
+			color: #3A79FF
+			background-color: #D2E1FF
+			&:hover
+				box-shadow: 0px 3px 20px rgba(210, 225, 255, 0.7)
+		&_text
+			font-family: 'Open Sans', sans-serif
+			font-weight: 600
+			font-size: 11px
+			color: #ADB3CB
+			display: flex
+			align-items: center
+			&:before,
+			&:after
+				content: ''
+				width: 15px
+				height: 0
+				border-bottom: 2px solid #DAE4FE
+				margin: 0 17px
+	&__bg
+		background-image: url(../img/about/about-bg.svg)
+		width: 90%
+		height: 543px
+		position: absolute
+		@include svg-picture
+		background-size: 100% 100%
+		align-self: center
+		z-index: -1

@@ -1,0 +1,98 @@
+.header
+	text-align: center
+	width: 100%
+	height: 570px
+	position: relative
+	transition: 1000ms
+	@include text
+	&__subtitle
+		padding-top: 92px
+		margin-bottom: 16px
+		margin-top: 0
+	&__title
+		margin-bottom: 28px
+	&__normal-text
+		width: 500px
+		margin: 0 auto
+		margin-bottom: 20px
+	&__button
+		width: 52px
+		height: 52px
+		background-color: #fff
+		box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6)
+		border-radius: 50px
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		transition: 350ms
+		&:hover
+			box-shadow: 0px 5px 35px #C9D1E7
+		&_icon
+			background-image: url(../img/header/play.svg)
+			width: 10px
+			height: 11px
+			transform: translateX(2px)
+	&__popup
+		align-items: center
+		justify-content: center
+		top: 0
+		position: fixed
+		width: 100%
+		height: 100%
+		display: none
+		pointer-events: none
+		z-index: 9
+		// заливка заднего фона при открытом попапе
+		&:before
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #000
+			opacity: .7
+		// кнопка закрытия
+		&:after
+			content: ''
+			background-image: url(../img/header/popup-close.svg)
+			background-repeat: no-repeat
+			background-position: center center
+			width: 20px
+			height: 20px
+			z-index: 99
+			margin-bottom: 451px
+			border: 3px solid #fff
+			border-radius: 50px
+			padding: 10px
+			cursor: pointer
+		&_video
+			width: 720px
+			height: 405px
+			z-index: 3
+	&__carousel
+		position: absolute
+		@include carousel
+	&__bg
+		&_item
+			width: 100%
+			height: 570px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			position: absolute
+			top: 0
+			z-index: -1
+			opacity: 0
+			transition: 2000ms
+		&_item-1
+			background-image: url(../img/header/header-bg-1.svg)
+		&_item-2
+			background-image: url(../img/header/header-bg-2.svg)
+		&_item-3
+			background-image: url(../img/header/header-bg-3.svg)
+		.active
+			opacity: 1

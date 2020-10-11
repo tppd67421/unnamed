@@ -1,0 +1,170 @@
+@media (max-width: 1000px)
+  .menu
+    @include menu-1000
+  .header
+    &__carousel
+      bottom: 40px
+    &__popup
+      &:after
+        margin-bottom: 400px
+      &_video
+        width: 630px
+        height: 355px
+  .company
+    padding: 35px 0
+    &__list
+      width: auto
+      flex-wrap: wrap
+      padding: 0 5%
+      justify-content: center
+    &__logo
+      margin: 25px 30px
+  .app
+    justify-content: flex-start
+    overflow: hidden
+    padding: 80px 0
+    &__text
+      z-index: 2
+    &__img
+      position: absolute
+      right: 0
+      z-index: 1
+      opacity: .1
+      pointer-events: none
+  .about
+    padding: 90px 5%
+    &__title
+      margin-bottom: 60px
+    &__advantages
+      margin-bottom: 70px
+      &_line
+        margin: 0 10px
+        width: 18px
+    &__bg
+      width: 100%
+      z-index: -2
+      top: 50px
+      opacity: .4
+  .statistics
+    &__productivity_title,
+    &__users_title
+      font-size: 40px
+      margin-bottom: 15px
+    &__productivity_text,
+    &__users_text
+      font-size: 15px
+      width: 220px
+    &__productivity
+      padding: 40px 60px 40px 0
+    &__users
+      padding: 40px 0 40px 60px
+  .resources
+    padding: 70px 0
+    &__title
+      margin-bottom: 40px
+    &__slider
+      &-wrap
+        width: 580px
+      &-title
+        font-size: 25px
+        margin-bottom: 8px
+      &-text
+        line-height: 22px
+        margin-bottom: 28px
+        width: 300px
+      &-button
+        margin-right: 25px
+      &-arrow
+        &-left
+          margin-right: 0
+        &-right
+          margin-left: 0
+      &_item
+        padding: 30px 25px
+        margin: 0 27px
+        &_text
+          z-index: 2
+        &_img
+          z-index: 1
+          flex-direction: column
+          div
+            height: auto
+            flex-direction: row
+          @for $i from 1 through 3
+            @for $j from 1 through 3
+              &-#{$i}#{$j}
+                box-shadow: 0px 15px 100px #E5EBF8
+                border-radius: 5px
+                @include svg-picture
+                @if $j == 1
+                  width: 150px
+                  height: 150px !important
+                  margin-right: 0
+                  margin-bottom: 7px
+                @else
+                  width: 72px
+                  height: 72px !important
+    &__carousel
+      margin-top: 40px
+  .testimonials
+    padding: 80px 0
+    &__content
+      display: block
+      width: 100%
+      margin: 0 auto
+    &__subtitle,
+    &__title,
+    &__normal-text
+      text-align: center
+    &__title
+      width: auto
+      margin-right: 0
+    &__slider
+      &-wrap
+        width: 100%
+      &_arrow
+        &-left,
+        &-right
+          display: block
+          pointer-events: auto
+      &_item
+        margin: 0 20px
+    &__normal-text
+      margin: 0 auto
+      margin-bottom: 30px
+    &__carousel
+      margin-left: 50%
+  .help
+    padding: 90px 0
+    &__faq
+      width: auto
+      text-align: left
+      padding: 0 20px
+    &__item
+      &_subheader
+        padding-left: 42px
+      &_text
+        width: 310px
+  .plan
+    padding: 80px 0
+    &__normal-text
+      padding: 0 30px
+    &__bg
+      height: 100%
+      opacity: .8
+  .sign-up
+    padding: 70px 0
+    &__wrap
+      width: auto
+      max-width: 800px
+      flex-wrap: wrap
+      justify-content: center
+      padding: 0 30px
+      align-content: space-around
+    &__text
+      margin-bottom: 40px
+      text-align: center
+  .footer
+    @include menu-1000
+    &__anchor-links
+      margin-bottom: 30px

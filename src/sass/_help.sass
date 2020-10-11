@@ -1,0 +1,80 @@
+.help
+  padding: 175px 0
+  text-align: center
+  @include text
+  &__subtitle
+    margin-bottom: 20px
+  &__title
+    margin-bottom: 70px
+    font-size: 24px !important
+  &__faq
+    width: 745px
+    margin: 0 auto
+  &__item
+    padding: 0 22px
+    border-bottom: 1px solid #D8E3FE
+    &.active
+      .help__item
+        &_arrow
+          transform: rotate(0deg)
+        &_header
+          opacity: 1
+        &_subheader
+          opacity: 1
+    &_header,
+    &_subheader
+      @include flex-align-center
+    &_header
+      margin-top: 20px
+      margin-bottom: 20px
+      padding-top: 10px
+      padding-bottom: 10px
+      transition: 500ms
+      opacity: 0.55
+      cursor: pointer
+    &_arrow
+      background-image: url(../img/help/arrow.svg)
+      width: 19px
+      height: 12px
+      transform: rotate(180deg)
+      margin-right: 22px
+      transition: 400ms
+      @include svg-picture
+      background-size: 100% 100%
+    &_title
+      font-family: 'Quicksand', sans-serif
+      font-weight: 500
+      line-height: 19px
+      font-size: 15px
+      letter-spacing: 0.03em
+      color: #495274
+    &_subheader
+      padding-left: 65px
+      padding-right: 15px
+      justify-content: space-between
+      margin-bottom: 30px
+      transition: 600ms
+      opacity: 0
+      &_wrap
+        height: 0px
+        overflow: hidden
+        transition: 400ms
+    &_text
+      font-family: 'Roboto', sans-serif
+      text-align: left
+      width: 370px
+      line-height: 27px
+      font-size: 14px
+      letter-spacing: 0.03em
+      color: #8D96BD
+    &_button
+      font-family: 'Quicksand', sans-serif
+      font-weight: 500
+      font-size: 13px
+      color: #7382A3
+      padding: 15px 32px
+      background-color: #E8ECF4
+      border-radius: 2px
+      transition: 200ms
+      &:hover
+        box-shadow: 0px 3px 20px rgba(#E8ECF4, 0.7)

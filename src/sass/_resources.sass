@@ -1,0 +1,122 @@
+.resources
+	background-color: #F5F8FF
+	padding: 104px 0
+	text-align: center
+	font-family: 'Quicksand', sans-serif
+	@include text
+	&__subtitle
+		margin-bottom: 20px
+	&__title
+		font-size: 24px !important
+		margin-bottom: 92px
+	&__slider
+		display: flex
+		justify-content: center
+		position: relative
+		&-wrap
+			width: 1000px
+			overflow: hidden
+		&-title
+			font-size: 36px
+			color: $saturation-text-color
+			margin-bottom: 32px
+		&-text
+			font-family: 'Roboto', sans-serif
+			line-height: 27px
+			font-size: 14px
+			letter-spacing: 0.03em
+			color: $normal-text-color
+			width: 408px
+			margin-bottom: 49px
+		&-button
+			padding: 13px 15px
+			background-color: #D2E1FF
+			border-radius: 2px
+			font-size: 13px
+			color: $blue-button-color-text
+			font-weight: bold
+			margin-right: 40px
+			transition: 200ms
+			&:hover
+					box-shadow: 0px 3px 20px rgba(210, 225, 255, 0.7)
+		&-link
+			font-size: 13px
+			color: #A6B6DA
+			font-weight: bold
+		&-arrow
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			&-left
+				margin-right: 50px
+				@include slider-arrow
+				transform: rotate(180deg)
+			&-right
+				margin-left: 50px
+				@include slider-arrow
+		&_item
+			display: flex
+			justify-content: center
+			padding: 63px 40px
+			background-color: #fff
+			border: 1px solid #D8E3FE
+			box-sizing: border-box
+			box-shadow: 0px 15px 50px #EFF4FF
+			position: absolute
+			margin: 0 15px
+			@for $i from 0 to 5
+				&:nth-child(#{$i + 1})
+					left: #{$left * $i}
+			&_img
+				display: flex
+				margin-right: 67px
+				div
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+				@for $i from 1 through 3
+					@for $j from 1 through 3
+						&-#{$i}#{$j}
+							box-shadow: 0px 15px 100px #E5EBF8
+							border-radius: 5px
+							@include svg-picture
+							@if $j == 1
+								width: 267px
+								height: 267px
+								margin-right: 13px
+							@else
+								width: 126px
+								height: 126px
+				&-11
+					background-image: linear-gradient(13.45deg, rgba(241, 255, 86, 0.75) 1.89%, rgba(255, 214, 0, 0) 68.24%),
+					url(../img/resources/slider-11.jpg)
+				&-12
+					background-image: linear-gradient(27.43deg, rgba(255, 53, 53, 0.48) 14.02%, rgba(255, 179, 90, 0) 68%),
+					url(../img/resources/slider-12.jpg)
+				&-13
+					background-image: linear-gradient(13.46deg, rgba(53, 170, 255, 0.68) 11.59%, rgba(90, 136, 255, 0) 96.88%),
+					url(../img/resources/slider-13.jpg)
+				&-21
+					background-image: linear-gradient(13.45deg, rgba(255, 86, 86, 0.75) 1.89%, rgba(255, 0, 0, 0) 68.24%),
+					url(../img/resources/slider-11.jpg)
+				&-22
+					background-image: linear-gradient(27.43deg, rgba(251, 255, 50, 0.7) 14.02%, rgba(255, 229, 90, 0) 68%),
+					url(../img/resources/slider-12.jpg)
+				&-23
+					background-image: linear-gradient(13.46deg, rgba(53, 255, 62, 0.68) 11.59%, rgba(90, 255, 186, 0) 96.88%),
+					url(../img/resources/slider-13.jpg)
+				&-31
+					background-image: linear-gradient(13.45deg, rgba(86, 255, 245, 0.75) 1.89%, rgba(0, 255, 133, 0) 68.24%),
+					url(../img/resources/slider-11.jpg)
+				&-32
+					background-image: linear-gradient(27.43deg, rgba(255, 50, 247, 0.7) 14.02%, rgba(255, 90, 90, 0) 68%),
+					url(../img/resources/slider-12.jpg)
+				&-33
+					background-image: linear-gradient(13.46deg, rgba(255, 53, 53, 0.68) 11.59%, rgba(202, 255, 90, 0) 96.88%),
+					url(../img/resources/slider-13.jpg)
+			&_text
+				text-align: left
+	&__carousel
+		margin-top: 70px
+		@include carousel

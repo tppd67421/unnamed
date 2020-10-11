@@ -1,0 +1,44 @@
+.menu
+	@include menu
+	position: relative
+	z-index: 7
+	background-color: #fff
+	&__gamburger
+		display: none
+		pointer-events: none
+		cursor: pointer
+		position: relative
+		width: 30px
+		height: 20px
+		margin-left: 20px
+		span,
+		&:after,
+		&:before
+			position: absolute
+			width: 100%
+			height: 0.2em
+			background-color: #6581BE
+			border-radius: 50px
+			transition: 300ms
+		span
+			top: 50%
+			transform: translateY(-50%)
+		&:after,
+		&:before
+			content: ""
+		&:after
+			top: 0
+		&:before
+			bottom: 0
+		&.active
+			span
+				transform: rotate(-45deg)
+				opacity: 0
+			&:after
+				transform: rotate(135deg)
+				margin-top: -1px
+				top: 50%
+			&:before
+				transform: rotate(45deg)
+				margin-top: -1px
+				top: 50%

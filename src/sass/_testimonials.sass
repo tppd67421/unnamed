@@ -1,0 +1,89 @@
+.testimonials
+  padding: 110px 0
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%)
+  @include text
+  display: flex
+  justify-content: flex-end
+  &__content
+    display: flex
+    justify-content: space-between
+    width: 85%
+  &__text
+  &__subtitle
+    margin-bottom: 31px
+  &__title
+    font-weight: 500
+    font-size: 36px !important
+    margin-bottom: 14px
+    margin-right: 50px
+    line-height: 45px !important
+  &__normal-text
+    font-family: 'Open Sans', sans-serif
+    width: 323px
+    font-weight: 600
+    line-height: 23px
+    font-size: 14px !important
+  &__slider
+    margin-bottom: 70px
+    position: relative
+    display: flex
+    transition: 500ms
+    &-wrap
+      width: 700px
+      height: 265px
+      overflow: hidden
+      position: relative
+    &_arrow
+      padding: 0 5%
+      position: absolute
+      width: 90%
+      left: 0
+      display: flex
+      justify-content: space-between
+      z-index: 2
+      &-left,
+      &-right
+        display: none
+        pointer-events: none
+        transition: 300ms
+        @include slider-arrow
+      &-left
+        transform: rotate(180deg)
+    &_item
+      background-color: #ffffff
+      border: 1px solid #D8E3FE
+      padding: 41px 70px
+      position: relative
+      display: flex
+      justify-content: center
+      margin: 0 20px
+      margin-left: 30px
+      display: flex
+      justify-content: center
+      opacity: .4
+      box-shadow: none
+      transition: 1300ms
+      &.active
+        opacity: 1 !important
+        box-shadow: 0px 15px 50px #D4DCF1
+      &_text
+        font-family: 'Roboto', sans-serif
+        width: 283px
+        line-height: 24px
+        font-size: 14px
+        letter-spacing: 0.03em
+        color: #676F95
+      &_img
+        background-image: url(../img/testimonials/slider-1.png)
+        width: 62px
+        height: 62px
+        border-radius: 50px
+        align-self: flex-end
+        position: absolute
+        transform: translateY(70px)
+        @include svg-picture
+        background-size: 100% 100%
+  &__carousel
+    @include carousel
+    width: 190px
+    margin-left: #{$width-slide / 2}px

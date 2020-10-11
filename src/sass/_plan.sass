@@ -1,0 +1,66 @@
+.plan
+  text-align: center
+  padding: 91px 0
+  background: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%)
+  position: relative
+  display: flex
+  justify-content: center
+  flex-direction: column
+  @include text
+  &__subtitle,
+  &__title,
+  &__normal-text
+    color: #ffffff !important
+    position: relative
+    z-index: 2
+  &__subtitle
+    margin-bottom: 16px
+  &__title
+    margin-bottom: 28px
+  &__normal-text
+    max-width: 712px
+    margin: 0 auto
+    margin-bottom: 55px
+  &__button
+    font-size: 13px
+    font-family: 'Quicksand', sans-serif
+    display: flex
+    justify-content: center
+    position: relative
+    z-index: 2
+    &_main
+      padding: 13px 23px
+      background-color: #fff
+      box-shadow: 0px 5px 15px #6480E8
+      border-radius: 2px 0 0 2px
+      color: #565F82
+      font-weight: 700
+      transition: 200ms
+      &:hover
+        box-shadow: 0px 5px 15px rgba(#455BAB, .5)
+    &_normal
+      padding: 13px 10px
+      font-weight: 500
+      color: #C7D3FF
+      border: 1px solid #A0B4FF
+      border-radius: 0 2px 2px 0
+  &__bg
+    position: absolute
+    z-index: 1
+    display: flex
+    justify-content: space-between
+    width: 1270px
+    margin-left: 50%
+    transform: translateX(-50%)
+  &__bg-1,
+  &__bg-2
+    @include svg-picture
+  &__bg-1
+    background-image: url(../img/plan/plan-bg-1.svg)
+    width: 247px
+    height: 319px
+  &__bg-2
+    background-image: url(../img/plan/plan-bg-2.svg)
+    width: 425px
+    height: 186px
+    align-self: flex-end
